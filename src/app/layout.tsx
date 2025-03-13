@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -63,10 +62,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <Head>
+      <head>
         <meta name="apple-mobile-web-app-title" content="Vistypo" />
         <meta name="google-site-verification" content="c6enZSxGPlAcPkg1Qxqx3lEdnJJrxE1lzkHeh-LP69g" />
-      </Head>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
           {children}
