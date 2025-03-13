@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "es_ES",
     images: [
       {
-        url: "https://vistypo.vercel.app/og-image.png",
+        url: "https://vistypo.vercel.app/banner-image.png",
         width: 800,
         height: 420,
         alt: "Vistypo - Preview Text with Your Fonts",
