@@ -27,14 +27,7 @@ export const metadata: Metadata = {
     url: "https://vistypo.vercel.app",
     type: "website",
     locale: "es_ES",
-    images: [
-      {
-        url: "https://vistypo.vercel.app/banner-image.png",
-        width: 800,
-        height: 420,
-        alt: "Vistypo - Preview Text with Your Fonts",
-      },
-    ],
+    images: [{ url: "https://vistypo.vercel.app/banner-image.jpg", alt: "Vistypo - Preview Text with Your Fonts" }],
   },
   twitter: {
     card: "summary_large_image",
