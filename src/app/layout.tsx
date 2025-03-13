@@ -17,6 +17,43 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Vistypo - Preview Text with Your Fonts",
   description: "A simple tool to preview text with your local fonts or uploaded font files",
+  keywords: ["font", "preview", "typography", "text", "local", "file", "upload"],
+  authors: [{ name: "Z3belek", url: "https://github.com/Z3belek" }],
+  creator: "Z3belek",
+  publisher: "Vistypo",
+  openGraph: {
+    title: "Vistypo - Preview Text with Your Fonts",
+    description: "A simple tool to preview text with your local fonts or uploaded font files",
+    url: "https://vistypo.vercel.app",
+    type: "website",
+    locale: "es_ES",
+    images: [
+      {
+        url: "https://vistypo.vercel.app/og-image.png",
+        width: 800,
+        height: 420,
+        alt: "Vistypo - Preview Text with Your Fonts",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vistypo - Preview Text with Your Fonts",
+    description: "A simple tool to preview text with your local fonts or uploaded font files",
+    creator: "@Vistypo",
+    images: [{ url: "https://vistypo.vercel.app/twitter-image.png", alt: "Vistypo - Preview Text with Your Fonts" }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    }
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +65,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <Head>
         <meta name="apple-mobile-web-app-title" content="Vistypo" />
+        <meta name="google-site-verification" content="c6enZSxGPlAcPkg1Qxqx3lEdnJJrxE1lzkHeh-LP69g" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
