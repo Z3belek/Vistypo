@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,6 +54,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     }
   },
+  verification: {
+    google: "c6enZSxGPlAcPkg1Qxqx3lEdnJJrxE1lzkHeh-LP69g"
+  }
 };
 
 export default function RootLayout({
@@ -64,13 +68,13 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-title" content="Vistypo" />
-        <meta name="google-site-verification" content="c6enZSxGPlAcPkg1Qxqx3lEdnJJrxE1lzkHeh-LP69g" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-X32B8FSETB" />
     </html>
   );
 }
